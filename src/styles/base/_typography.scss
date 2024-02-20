@@ -1,0 +1,177 @@
+
+$h1-font-size: 44px;
+$h1-line-height: 72px;
+
+$h2-font-size: 40px;
+$h2-line-height: 64px;
+
+$h3-font-size: 32px;
+$h3-line-height: 56px;
+
+$h4-font-size: 24px;
+$h4-line-height: 56px;
+
+$h5-font-size: 20px;
+$h5-line-height: 48px;
+
+$h6-font-size: 16px;
+$h6-line-height: 40px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family) !important;
+  font-style: normal;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--neutral-black);
+}
+h2 {
+  font-size: to.rem($h2-font-size) !important;
+  font-weight: 800 !important;
+  line-height: to.rem($h2-line-height) !important;
+  letter-spacing: 0 !important;
+}
+
+h3 {
+  font-size: to.rem($h3-font-size) !important;
+  font-weight: 800 !important;
+  line-height: to.rem($h3-line-height) !important;
+  letter-spacing: 0 !important;
+}
+
+h4 {
+  font-size: to.rem($h4-font-size) !important;
+  font-weight: 700 !important;
+  line-height: to.rem($h4-line-height) !important;
+  letter-spacing: 0 !important;
+}
+
+h5 {
+  font-size: to.rem($h5-font-size) !important;
+  font-weight: 700 !important;
+  line-height: to.rem($h5-line-height) !important;
+  letter-spacing: 0 !important;
+}
+
+h6 {
+  font-size: to.rem($h6-font-size) !important;
+  font-weight: 700 !important;
+  line-height: to.rem($h6-line-height) !important;
+  letter-spacing: 0 !important;
+}
+.text-body-xxs {
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-xs {
+  font-family: var(--font-family) !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-s {
+  font-family: var(--font-family) !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-regular {
+  font-family: var(--font-family) !important;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-smd {
+  font-family: var(--font-family) !important;
+  font-size: 24px !important;
+  font-weight: 300 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-md {
+  font-family: var(--font-family) !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-lg {
+  font-family: var(--font-family) !important;
+  font-size: 28px !important;
+  font-weight: 300 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-xl {
+  font-family: var(--font-family) !important;
+  font-size: 32px !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-2xlg {
+  font-family: var(--font-family) !important;
+  font-size: 40px !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-body-3xlg {
+  font-family: var(--font-family) !important;
+  font-size: 44px !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  letter-spacing: 0em !important;
+}
+.text-caption-md {
+  font-family: var(--font-family) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
+.text-caption-lg {
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
+.text-button-s {
+  font-family: var(--font-family) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
+.text-button-md {
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
+.text-button-lg {
+  font-family: var(--font-family) !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
+.text-button-xlg {
+  font-family: var(--font-family) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+}
