@@ -1,21 +1,27 @@
+//@use 'sass-rem' as to;
+@import "node_modules/sass-rem/rem";
+
+$scale: 1;
+$mobile-scale: 0.75;
+$tablet-scale: 0.95;
 
 $h1-font-size: 44px;
-$h1-line-height: 72px;
+$h1-line-height: 140%;
 
 $h2-font-size: 40px;
-$h2-line-height: 64px;
+$h2-line-height: 140%;
 
 $h3-font-size: 32px;
-$h3-line-height: 56px;
+$h3-line-height: 140%;
 
 $h4-font-size: 24px;
-$h4-line-height: 56px;
+$h4-line-height: 140%;
 
 $h5-font-size: 20px;
-$h5-line-height: 48px;
+$h5-line-height: 140%;
 
 $h6-font-size: 16px;
-$h6-line-height: 40px;
+$h6-line-height: 140%;
 
 h1,
 h2,
@@ -30,148 +36,213 @@ h6 {
   color: var(--neutral-black);
 }
 h2 {
-  font-size: to.rem($h2-font-size) !important;
+  font-size: rem($h2-font-size) !important;
   font-weight: 800 !important;
-  line-height: to.rem($h2-line-height) !important;
+  line-height: $h2-line-height !important;
   letter-spacing: 0 !important;
 }
 
 h3 {
-  font-size: to.rem($h3-font-size) !important;
+  font-size: rem($h3-font-size) !important;
   font-weight: 800 !important;
-  line-height: to.rem($h3-line-height) !important;
+  line-height: $h3-line-height !important;
   letter-spacing: 0 !important;
 }
 
 h4 {
-  font-size: to.rem($h4-font-size) !important;
+  font-size: rem($h4-font-size) !important;
   font-weight: 700 !important;
-  line-height: to.rem($h4-line-height) !important;
+  line-height: $h4-line-height !important;
   letter-spacing: 0 !important;
 }
 
 h5 {
-  font-size: to.rem($h5-font-size) !important;
+  font-size: rem($h5-font-size) !important;
   font-weight: 700 !important;
-  line-height: to.rem($h5-line-height) !important;
+  line-height: $h5-line-height !important;
   letter-spacing: 0 !important;
 }
 
 h6 {
-  font-size: to.rem($h6-font-size) !important;
+  font-size: rem($h6-font-size) !important;
   font-weight: 700 !important;
-  line-height: to.rem($h6-line-height) !important;
+  line-height: $h6-line-height !important;
   letter-spacing: 0 !important;
 }
 .text-body-xxs {
   font-family: var(--font-family) !important;
   font-size: 14px !important;
   font-weight: 300 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-xs {
   font-family: var(--font-family) !important;
   font-size: 16px !important;
   font-weight: 300 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-s {
   font-family: var(--font-family) !important;
   font-size: 18px !important;
   font-weight: 300 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-regular {
   font-family: var(--font-family) !important;
   font-size: 20px !important;
   font-weight: 300 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-smd {
   font-family: var(--font-family) !important;
   font-size: 24px !important;
   font-weight: 300 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-md {
   font-family: var(--font-family) !important;
   font-size: 24px !important;
   font-weight: 400 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-lg {
   font-family: var(--font-family) !important;
   font-size: 28px !important;
   font-weight: 300 !important;
-  line-height: 24px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-body-xl {
   font-family: var(--font-family) !important;
   font-size: 32px !important;
   font-weight: 500 !important;
-  line-height: 24px !important;
+  line-height: 140% !important;
   letter-spacing: 0em !important;
 }
 .text-body-2xlg {
   font-family: var(--font-family) !important;
   font-size: 40px !important;
   font-weight: 500 !important;
-  line-height: 24px !important;
+  line-height: 140% !important;
   letter-spacing: 0em !important;
 }
 .text-body-3xlg {
   font-family: var(--font-family) !important;
   font-size: 44px !important;
   font-weight: 500 !important;
-  line-height: 24px !important;
+  line-height: 140% !important;
   letter-spacing: 0em !important;
 }
 .text-caption-md {
   font-family: var(--font-family) !important;
   font-size: 12px !important;
   font-weight: 500 !important;
-  line-height: 16px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-caption-lg {
   font-family: var(--font-family) !important;
   font-size: 14px !important;
   font-weight: 500 !important;
-  line-height: 16px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-button-s {
   font-family: var(--font-family) !important;
   font-size: 12px !important;
   font-weight: 500 !important;
-  line-height: 16px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-button-md {
   font-family: var(--font-family) !important;
   font-size: 14px !important;
   font-weight: 500 !important;
-  line-height: 16px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-button-lg {
   font-family: var(--font-family) !important;
   font-size: 16px !important;
   font-weight: 500 !important;
-  line-height: 16px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
 }
 .text-button-xlg {
   font-family: var(--font-family) !important;
   font-size: 18px !important;
   font-weight: 500 !important;
-  line-height: 16px !important;
+  line-height: 180% !important;
   letter-spacing: 0em !important;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: rem($h1-font-size * $tablet-scale);
+    line-height: rem($h1-line-height * $tablet-scale);
+  }
+
+  h2 {
+    font-size: rem($h2-font-size * $tablet-scale);
+    line-height: rem($h2-line-height * $tablet-scale);
+  }
+
+  h3 {
+    font-size: rem($h3-font-size * $tablet-scale);
+    line-height: rem($h3-line-height * $tablet-scale);
+  }
+
+  h4 {
+    font-size: rem($h4-font-size * $tablet-scale);
+    line-height: rem($h4-line-height * $tablet-scale);
+  }
+
+  h5 {
+    font-size: rem($h5-font-size * $tablet-scale);
+    line-height: rem($h5-line-height * $tablet-scale);
+  }
+
+  h6 {
+    font-size: rem($h6-font-size * $tablet-scale);
+    line-height: rem($h6-line-height * $tablet-scale);
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: rem($h1-font-size * $mobile-scale);
+    line-height: rem($h1-line-height * $mobile-scale);
+  }
+
+  h2 {
+    font-size: rem($h2-font-size * $mobile-scale);
+    line-height: rem($h2-line-height * $mobile-scale);
+  }
+
+  h3 {
+    font-size: rem($h3-font-size * $mobile-scale);
+    line-height: rem($h3-line-height * $mobile-scale);
+  }
+
+  h4 {
+    font-size: rem($h4-font-size * $mobile-scale);
+    line-height: rem($h4-line-height * $mobile-scale);
+  }
+
+  h5 {
+    font-size: rem($h5-font-size * $mobile-scale);
+    line-height: rem($h5-line-height * $mobile-scale);
+  }
+
+  h6 {
+    font-size: rem($h6-font-size * $mobile-scale);
+    line-height: rem($h6-line-height * $mobile-scale);
+  }
 }
