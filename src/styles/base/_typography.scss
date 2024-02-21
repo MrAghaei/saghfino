@@ -69,6 +69,20 @@ h6 {
   line-height: $h6-line-height !important;
   letter-spacing: 0 !important;
 }
+.text-display-1 {
+  font-family: var(--font-family) !important;
+  font-size: 64px !important;
+  font-weight: 300 !important;
+  line-height: 140% !important;
+  letter-spacing: 0em !important;
+}
+.text-display-2 {
+  font-family: var(--font-family) !important;
+  font-size: 56px !important;
+  font-weight: 300 !important;
+  line-height: 120% !important;
+  letter-spacing: 0em !important;
+}
 .text-body-xxs {
   font-family: var(--font-family) !important;
   font-size: 14px !important;
