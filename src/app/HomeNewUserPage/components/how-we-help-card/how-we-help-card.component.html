@@ -1,0 +1,15 @@
+<!--<div class="flex flex-col gap-7 bg-neutral-gray2 w-72 p-10 rounded-2xl border-2 border-neutral-gray3 h-full" dir="rtl">-->
+<!--  <img src="assets/photos/illustration-{{image}}.png"/>-->
+<!--  <div>-->
+<!--    <h4>{{ header }}</h4>-->
+<!--    <p>{{text}}</p>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="flex flex-col gap-4 md:gap-6 lg:gap-8 bg-neutral-gray2 p-6 md:p-10 rounded-2xl border-2 border-neutral-gray3 max-w-md lg:max-w-lg mx-auto h-full" dir="rtl">
+  <img src="assets/photos/{{ image }}.png" class="w-full h-auto object-cover rounded-lg" alt="Illustration">
+  <div class="text-center md:text-right">
+    <h4>{{ header }}</h4>
+    <p class="text-body-xs md:text-base text-neutral-gray10">{{ text }}</p>
+  </div>
+  <button (click)="onClick(buttonText)" class="bg-primary-default text-white rounded pt-2 pb-2 mt-auto">{{buttonText}}</button>
+</div>
