@@ -13,9 +13,19 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
+import { HowWeHelpComponent } from './HomeNewUserPage/components/how-we-help/how-we-help.component'
+import { HowWeHelpCardComponent } from './HomeNewUserPage/components/how-we-help-card/how-we-help-card.component'
 
 @NgModule({
-  declarations: [AppComponent, HomeNewUserComponent, HeaderComponent, NavbarComponent, SearchbarComponent],
+  declarations: [
+    AppComponent,
+    HomeNewUserComponent,
+    HeaderComponent,
+    NavbarComponent,
+    SearchbarComponent,
+    HowWeHelpComponent,
+    HowWeHelpCardComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, NgOptimizedImage, MatInputModule, MatFormFieldModule, MatIconModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
