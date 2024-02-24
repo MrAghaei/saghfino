@@ -14,7 +14,9 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
 import { HowWeHelpComponent } from './HomeNewUserPage/components/how-we-help/how-we-help.component'
-import { HowWeHelpCardComponent } from './HomeNewUserPage/components/how-we-help-card/how-we-help-card.component'
+import { HowWeHelpCardComponent } from './HomeNewUserPage/components/how-we-help-card/how-we-help-card.component';
+import { CategoryComponent } from './HomeNewUserPage/components/category/category.component';
+import { CategoryCardComponent } from './HomeNewUserPage/components/category-card/category-card.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HowWeHelpCardComponent } from './HomeNewUserPage/components/how-we-help
     SearchbarComponent,
     HowWeHelpComponent,
     HowWeHelpCardComponent,
+    CategoryComponent,
+    CategoryCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgOptimizedImage, MatInputModule, MatFormFieldModule, MatIconModule],
   providers: [provideAnimationsAsync()],
