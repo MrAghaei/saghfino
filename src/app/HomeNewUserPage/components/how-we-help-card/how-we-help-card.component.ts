@@ -13,6 +13,6 @@ export class HowWeHelpCardComponent {
   @Output() onButtonClick: EventEmitter<any> = new EventEmitter<any>()
 
   onClick(value: string): void {
-    this.onButtonClick.emit()
+    this.onButtonClick.emit(value)
   }
 }
