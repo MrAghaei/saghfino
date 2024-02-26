@@ -12,6 +12,8 @@ import { HomePageModule } from './modules/home-page.module'
 import { NavbarComponent } from './components/navbar/navbar.component'
 import { RouterModule } from '@angular/router'
 import { HomePageMainComponent } from './components/home-page/home-page-main/home-page-main.component'
+import { BlogComponent } from './components/home-page/blog/blog.component'
+import { BlogCardComponent } from './components/home-page/blog-card/blog-card.component'
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
