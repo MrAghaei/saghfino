@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatIconModule } from '@angular/material/icon'
 import { AppModule } from '../app.module'
+import { BlogComponent } from '../components/home-page/blog/blog.component'
+import { BlogCardComponent } from '../components/home-page/blog-card/blog-card.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { AppModule } from '../app.module'
     CategoryComponent,
     CategoryCardComponent,
     FeatureComponent,
+    BlogComponent,
+    BlogCardComponent,
   ],
   imports: [MatInputModule, MatFormFieldModule, MatIconModule],
   exports: [],
