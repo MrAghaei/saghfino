@@ -7,7 +7,7 @@
     <form class="flex flex-row items-center justify-end">
       <mat-form-field class="flex-grow" dir="rtl">
         <input matInput placeholder="شهر مورد نظر را انتخاب کنید" [(ngModel)]="selectedCity" [matAutocomplete]="auto">
-        <mat-icon matPrefix>location_city</mat-icon>
+        <mat-icon matPrefix>search</mat-icon>
         <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onCitySelectionChange()">
           <mat-option *ngFor="let city of filteredCities$ | async" [value]="city">{{ city }}</mat-option>
         </mat-autocomplete>
