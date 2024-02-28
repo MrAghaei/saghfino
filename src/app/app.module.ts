@@ -20,9 +20,19 @@ import { SearchPageMainComponent } from './components/search-page/search-page-ma
 import { MatSelectModule } from '@angular/material/select'
 import { MatAutocompleteModule } from '@angular/material/autocomplete'
 import { MatInputModule } from '@angular/material/input'
+import { HousesComponent } from './components/search-page/houses/houses.component'
+import { HousesCardComponent } from './components/search-page/houses-card/houses-card.component'
+import { MatIcon } from '@angular/material/icon'
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent, SearchPageMainComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    SearchPageMainComponent,
+    HousesComponent,
+    HousesCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,6 +51,7 @@ import { MatInputModule } from '@angular/material/input'
         component: SearchPageMainComponent,
       },
     ]),
+    MatIcon,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
