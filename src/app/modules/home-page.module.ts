@@ -14,6 +14,10 @@ import { MatIconModule } from '@angular/material/icon'
 import { AppModule } from '../app.module'
 import { BlogComponent } from '../components/home-page/blog/blog.component'
 import { BlogCardComponent } from '../components/home-page/blog-card/blog-card.component'
+import { FormsModule } from '@angular/forms'
+import { MatAutocomplete, MatAutocompleteTrigger, MatOption } from '@angular/material/autocomplete'
+import { MatSelect } from '@angular/material/select'
+import { AsyncPipe, NgForOf } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -28,7 +32,18 @@ import { BlogCardComponent } from '../components/home-page/blog-card/blog-card.c
     BlogComponent,
     BlogCardComponent,
   ],
-  imports: [MatInputModule, MatFormFieldModule, MatIconModule],
-  exports: [],
+  imports: [
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    FormsModule,
+    MatOption,
+    MatSelect,
+    NgForOf,
+    MatAutocomplete,
+    MatAutocompleteTrigger,
+    AsyncPipe,
+  ],
+  exports: [HeaderComponent],
 })
 export class HomePageModule {}
