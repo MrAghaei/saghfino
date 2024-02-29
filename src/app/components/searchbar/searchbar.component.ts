@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { map, Observable, startWith } from 'rxjs'
 import { FormControl } from '@angular/forms'
 
@@ -9,12 +9,14 @@ import { FormControl } from '@angular/forms'
   styleUrl: './searchbar.component.scss',
 })
 export class SearchbarComponent {
-  selectedCity!: string
-  cities: string[] = ['گیلان', 'تهران', 'شیراز'] // Replace with your list of cities
+  cities: string[] = ['گیلان', 'تهران', 'شیراز']
   filteredCities$!: Observable<string[]>
   cityControl = new FormControl()
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
     this.filteredCities$ = this.cityControl.valueChanges.pipe(
@@ -28,13 +30,17 @@ export class SearchbarComponent {
     return this.cities.filter((city) => city.toLowerCase().includes(filterValue))
   }
 
-  onCitySelectionChange() {
-    if (!this.selectedCity) {
-      // If no city is selected, navigate back to the '' route
+  onCitySelectionChange(): void {
+    console.log(this.cityControl.value)
+    this.router.navigate(['/search'], {
+      queryParams: { city: this.cityControl.value },
+      relativeTo: this.route,
+      queryParamsHandling: 'merge',
+    })
+  }
+  onInputChange(): void {
+    if (!this.cityControl.value) {
       this.router.navigate([''])
-    } else {
-      // Otherwise, navigate to the search route with the selected city as a query parameter
-      this.router.navigate(['/search'], { queryParams: { city: this.selectedCity } })
     }
   }
 }

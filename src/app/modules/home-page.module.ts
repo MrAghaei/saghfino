@@ -14,10 +14,11 @@ import { MatIconModule } from '@angular/material/icon'
 import { AppModule } from '../app.module'
 import { BlogComponent } from '../components/home-page/blog/blog.component'
 import { BlogCardComponent } from '../components/home-page/blog-card/blog-card.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatAutocomplete, MatAutocompleteTrigger, MatOption } from '@angular/material/autocomplete'
 import { MatSelect } from '@angular/material/select'
 import { AsyncPipe, NgForOf } from '@angular/common'
+import { RouterOutlet } from '@angular/router'
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import { AsyncPipe, NgForOf } from '@angular/common'
     MatAutocomplete,
     MatAutocompleteTrigger,
     AsyncPipe,
+    ReactiveFormsModule,
+    RouterOutlet,
   ],
   exports: [HeaderComponent],
 })

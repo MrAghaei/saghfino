@@ -6,18 +6,13 @@
   <div>
     <form class="flex flex-row items-center justify-end">
       <mat-form-field class="flex-grow" dir="rtl">
-        <input matInput placeholder="شهر مورد نظر را انتخاب کنید" [(ngModel)]="selectedCity" [matAutocomplete]="auto">
+        <input matInput placeholder="شهر مورد نظر را انتخاب کنید" (input)="onInputChange()" [formControl]="cityControl" [matAutocomplete]="auto">
         <mat-icon matPrefix>search</mat-icon>
         <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onCitySelectionChange()">
           <mat-option *ngFor="let city of filteredCities$ | async" [value]="city">{{ city }}</mat-option>
         </mat-autocomplete>
       </mat-form-field>
     </form>
-
-
-
   </div>
-
-
 </div>
 
