@@ -9,8 +9,7 @@ import { FormControl } from '@angular/forms'
   styleUrl: './searchbar.component.scss',
 })
 export class SearchbarComponent {
-  selectedCity!: string
-  cities: string[] = ['گیلان', 'تهران', 'شیراز'] // Replace with your list of cities
+  cities: string[] = ['گیلان', 'تهران', 'شیراز']
   filteredCities$!: Observable<string[]>
   cityControl = new FormControl()
 
@@ -29,12 +28,7 @@ export class SearchbarComponent {
   }
 
   onCitySelectionChange() {
-    if (!this.selectedCity) {
-      // If no city is selected, navigate back to the '' route
-      this.router.navigate([''])
-    } else {
-      // Otherwise, navigate to the search route with the selected city as a query parameter
-      this.router.navigate(['/search'], { queryParams: { city: this.selectedCity } })
-    }
+    console.log(this.cityControl.value)
+    this.router.navigate(['/search'], { queryParams: { city: this.cityControl.value } })
   }
 }
