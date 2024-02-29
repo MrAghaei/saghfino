@@ -23,6 +23,8 @@ import { MatInputModule } from '@angular/material/input'
 import { HousesComponent } from './components/search-page/houses/houses.component'
 import { HousesCardComponent } from './components/search-page/houses-card/houses-card.component'
 import { MatIcon } from '@angular/material/icon'
+import { LandingPageComponent } from './components/landing-page/landing-page.component'
+import { LandingPageModule } from './modules/landing-page.module'
 
 @NgModule({
   declarations: [
@@ -41,14 +43,11 @@ import { MatIcon } from '@angular/material/icon'
     MatSelectModule,
     MatAutocompleteModule,
     MatInputModule,
+    LandingPageModule,
     RouterModule.forRoot([
       {
         path: '',
-        component: HomePageMainComponent,
-      },
-      {
-        path: 'search',
-        component: SearchPageMainComponent,
+        component: LandingPageComponent,
       },
     ]),
     MatIcon,

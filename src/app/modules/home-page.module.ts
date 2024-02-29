@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatAutocomplete, MatAutocompleteTrigger, MatOption } from '@angular/material/autocomplete'
 import { MatSelect } from '@angular/material/select'
 import { AsyncPipe, NgForOf } from '@angular/common'
+import { RouterOutlet } from '@angular/router'
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AsyncPipe, NgForOf } from '@angular/common'
     MatAutocompleteTrigger,
     AsyncPipe,
     ReactiveFormsModule,
+    RouterOutlet,
   ],
   exports: [HeaderComponent],
 })

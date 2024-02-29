@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { map, Observable, startWith } from 'rxjs'
 import { FormControl } from '@angular/forms'
 
@@ -13,7 +13,10 @@ export class SearchbarComponent {
   filteredCities$!: Observable<string[]>
   cityControl = new FormControl()
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
     this.filteredCities$ = this.cityControl.valueChanges.pipe(
@@ -27,8 +30,17 @@ export class SearchbarComponent {
     return this.cities.filter((city) => city.toLowerCase().includes(filterValue))
   }
 
-  onCitySelectionChange() {
+  onCitySelectionChange(): void {
     console.log(this.cityControl.value)
-    this.router.navigate(['/search'], { queryParams: { city: this.cityControl.value } })
+    this.router.navigate(['/search'], {
+      queryParams: { city: this.cityControl.value },
+      relativeTo: this.route,
+      queryParamsHandling: 'merge',
+    })
+  }
+  onInputChange(): void {
+    if (!this.cityControl.value) {
+      this.router.navigate([''])
+    }
   }
 }
