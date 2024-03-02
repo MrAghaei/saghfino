@@ -24,7 +24,9 @@ import { HousesComponent } from './components/search-page/houses/houses.componen
 import { HousesCardComponent } from './components/search-page/houses-card/houses-card.component'
 import { MatIcon } from '@angular/material/icon'
 import { LandingPageComponent } from './components/landing-page/landing-page.component'
-import { LandingPageModule } from './modules/landing-page.module'
+import { LandingPageModule } from './modules/landing-page.module';
+import { CallToActionComponent } from './components/search-page/call-to-action/call-to-action.component';
+import { SearchRecommendationComponent } from './components/search-page/search-recommendation/search-recommendation.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { LandingPageModule } from './modules/landing-page.module'
     SearchPageMainComponent,
     HousesComponent,
     HousesCardComponent,
+    CallToActionComponent,
+    SearchRecommendationComponent,
   ],
   imports: [
     BrowserModule,
