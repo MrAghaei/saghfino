@@ -28,7 +28,9 @@ import { LandingPageModule } from './modules/landing-page.module';
 import { CallToActionComponent } from './components/search-page/call-to-action/call-to-action.component';
 import { SearchRecommendationComponent } from './components/search-page/search-recommendation/search-recommendation.component';
 import { TopRealEstateComponent } from './components/search-page/top-real-estate/top-real-estate.component';
-import { TopRealEstateCardComponent } from './components/search-page/top-real-estate-card/top-real-estate-card.component'
+import { TopRealEstateCardComponent } from './components/search-page/top-real-estate-card/top-real-estate-card.component';
+import { TopConsultantComponent } from './components/search-page/top-consultant/top-consultant.component';
+import { TopConsultantCardComponent } from './components/search-page/top-consultant-card/top-consultant-card.component'
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { TopRealEstateCardComponent } from './components/search-page/top-real-es
     SearchRecommendationComponent,
     TopRealEstateComponent,
     TopRealEstateCardComponent,
+    TopConsultantComponent,
+    TopConsultantCardComponent,
   ],
   imports: [
     BrowserModule,
