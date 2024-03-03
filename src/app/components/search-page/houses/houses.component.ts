@@ -1,6 +1,8 @@
 import { Component } from '@angular/core'
 import { houses } from '../../../Houses'
 import { housesModel } from '../../../housesModel'
+import { map } from 'rxjs'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-houses',
@@ -9,4 +11,7 @@ import { housesModel } from '../../../housesModel'
 })
 export class HousesComponent {
   housesData: housesModel[] = houses
+  user$ = this.route.queryParams.pipe(map((q) => q['city']))
+
+  constructor(private route: ActivatedRoute) {}
 }
