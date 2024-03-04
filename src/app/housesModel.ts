@@ -5,4 +5,5 @@ export interface housesModel {
   address: string
   rahnPrice: string
   ejarePrice: string
+  id: string
 }

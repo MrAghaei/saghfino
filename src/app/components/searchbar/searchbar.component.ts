@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { map, Observable, startWith } from 'rxjs'
 import { FormControl } from '@angular/forms'
-import { v4 as uuidv4 } from 'uuid'
+// import { v4 as uuidv4 } from 'uuid'
 interface City {
   name: string
   id: string
@@ -14,16 +14,16 @@ interface City {
 })
 export class SearchbarComponent {
   cities: City[] = [
-    { name: 'گیلان', id: this.generateUniqueId() },
-    { name: 'تهران', id: this.generateUniqueId() },
-    { name: 'شیراز', id: this.generateUniqueId() },
+    { name: 'گیلان', id: '1' },
+    { name: 'تهران', id: '2' },
+    { name: 'شیراز', id: '3' },
   ]
   filteredCities$!: Observable<City[]>
   cityControl = new FormControl()
 
-  generateUniqueId() {
-    return uuidv4()
-  }
+  // generateUniqueId() {
+  //   return uuidv4()
+  // }
   constructor(
     private router: Router,
     private route: ActivatedRoute,
