@@ -29,4 +29,22 @@ export const houses: housesModel[] = [
     ejarePrice: '100',
     id: '3',
   },
+  {
+    image: 'house1',
+    hoursPosted: '5',
+    area: '220',
+    address: 'شیراز، ملوانان، خیابان رسالت',
+    rahnPrice: '300',
+    ejarePrice: '100',
+    id: '3',
+  },
+  {
+    image: 'house1',
+    hoursPosted: '5',
+    area: '220',
+    address: 'شیراز، ملوانان، خیابان رسالت',
+    rahnPrice: '300',
+    ejarePrice: '100',
+    id: '3',
+  },
 ]
