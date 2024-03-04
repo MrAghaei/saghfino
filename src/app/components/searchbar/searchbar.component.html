@@ -9,7 +9,7 @@
         <input matInput placeholder="شهر مورد نظر را انتخاب کنید" (input)="onInputChange()" [formControl]="cityControl" [matAutocomplete]="auto">
         <mat-icon matPrefix>search</mat-icon>
         <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onCitySelectionChange()">
-          <mat-option *ngFor="let city of filteredCities$ | async" [value]="city">{{ city }}</mat-option>
+          <mat-option *ngFor="let city of filteredCities$ | async" [value]="city.id">{{ city.name }}</mat-option>
         </mat-autocomplete>
       </mat-form-field>
     </form>
