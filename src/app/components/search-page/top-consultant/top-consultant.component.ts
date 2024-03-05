@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { map } from 'rxjs'
 import { ActivatedRoute } from '@angular/router'
 
@@ -8,7 +8,5 @@ import { ActivatedRoute } from '@angular/router'
   styleUrl: './top-consultant.component.scss',
 })
 export class TopConsultantComponent {
-  user$ = this.route.queryParams.pipe(map((q) => q['city']))
-
-  constructor(private route: ActivatedRoute) {}
+  @Input() cityName!: string
 }

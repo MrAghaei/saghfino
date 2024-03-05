@@ -47,11 +47,13 @@ export class SearchPageMainComponent implements OnInit, OnDestroy {
   cityId!: string
   housesData: housesModel[] = []
   private queryParamsSubscription: Subscription | undefined
+  cityName!: string
 
   ngOnInit() {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {
       this.cityId = params['city'] || ''
       this.fetchHouses()
+      this.fetchCityNames()
     })
   }
 
@@ -61,9 +63,12 @@ export class SearchPageMainComponent implements OnInit, OnDestroy {
     }
   }
 
-  fetchHouses() {
+  fetchHouses(): void {
     this.getHousesService.getHouses(this.cityId).subscribe((data) => {
       this.housesData = data
     })
+  }
+  fetchCityNames(): void {
+    this.cityName = this.getHousesService.getCityNameById(this.cityId)
   }
 }
