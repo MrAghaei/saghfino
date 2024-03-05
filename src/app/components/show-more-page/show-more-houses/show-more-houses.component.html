@@ -11,14 +11,7 @@
     </div>
   </div>
   <div class="grid grid-cols-3 gap-7 mt-5">
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
-    <app-houses-card></app-houses-card>
+    <app-houses-card *ngFor="let house of housesData" [housesCardInputModel]="house"></app-houses-card>
   </div>
 </div>
 
