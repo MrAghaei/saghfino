@@ -11,7 +11,5 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class HousesComponent {
   @Input() housesData!: housesModel[]
-  user$ = this.route.queryParams.pipe(map((q) => q['city']))
-
-  constructor(private route: ActivatedRoute) {}
+  @Input() cityName!: string
 }
