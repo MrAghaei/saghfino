@@ -49,9 +49,6 @@ export class SearchbarComponent {
     })
   }
   onInputChange(): void {
-    console.log(this.cities[0].id)
-    console.log(this.cities[1].id)
-    console.log(this.cities[2].id)
     if (!this.cityControl.value) {
       this.router.navigate([''])
     }

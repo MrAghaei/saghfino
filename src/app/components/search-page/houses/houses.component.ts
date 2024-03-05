@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core'
 import { houses } from '../../../Houses'
 import { housesModel } from '../../../housesModel'
 import { map } from 'rxjs'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-houses',
@@ -12,4 +12,9 @@ import { ActivatedRoute } from '@angular/router'
 export class HousesComponent {
   @Input() housesData!: housesModel[]
   @Input() cityName!: string
+
+  constructor(private router: Router) {}
+  onSeeMoreClick(): void {
+    this.router.navigate(['showmore'], { queryParamsHandling: 'merge' })
+  }
 }

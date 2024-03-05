@@ -24,13 +24,19 @@ import { HousesComponent } from './components/search-page/houses/houses.componen
 import { HousesCardComponent } from './components/search-page/houses-card/houses-card.component'
 import { MatIcon } from '@angular/material/icon'
 import { LandingPageComponent } from './components/landing-page/landing-page.component'
-import { LandingPageModule } from './modules/landing-page.module';
-import { CallToActionComponent } from './components/search-page/call-to-action/call-to-action.component';
-import { SearchRecommendationComponent } from './components/search-page/search-recommendation/search-recommendation.component';
-import { TopRealEstateComponent } from './components/search-page/top-real-estate/top-real-estate.component';
-import { TopRealEstateCardComponent } from './components/search-page/top-real-estate-card/top-real-estate-card.component';
-import { TopConsultantComponent } from './components/search-page/top-consultant/top-consultant.component';
+import { LandingPageModule } from './modules/landing-page.module'
+import { CallToActionComponent } from './components/search-page/call-to-action/call-to-action.component'
+import { SearchRecommendationComponent } from './components/search-page/search-recommendation/search-recommendation.component'
+import { TopRealEstateComponent } from './components/search-page/top-real-estate/top-real-estate.component'
+import { TopRealEstateCardComponent } from './components/search-page/top-real-estate-card/top-real-estate-card.component'
+import { TopConsultantComponent } from './components/search-page/top-consultant/top-consultant.component'
 import { TopConsultantCardComponent } from './components/search-page/top-consultant-card/top-consultant-card.component'
+import { ShowMorePageMainComponent } from './components/show-more-page/show-more-page-main/show-more-page-main.component'
+import { PageFilterComponent } from './components/show-more-page/page-filter/page-filter.component'
+import { ShowMoreSearchbarComponent } from './components/show-more-page/show-more-searchbar/show-more-searchbar.component'
+import { FormsModule } from '@angular/forms'
+import { MapComponent } from './components/show-more-page/map/map.component';
+import { ShowMoreHousesComponent } from './components/show-more-page/show-more-houses/show-more-houses.component'
 
 @NgModule({
   declarations: [
@@ -46,6 +52,11 @@ import { TopConsultantCardComponent } from './components/search-page/top-consult
     TopRealEstateCardComponent,
     TopConsultantComponent,
     TopConsultantCardComponent,
+    ShowMorePageMainComponent,
+    PageFilterComponent,
+    ShowMoreSearchbarComponent,
+    MapComponent,
+    ShowMoreHousesComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,8 +72,13 @@ import { TopConsultantCardComponent } from './components/search-page/top-consult
         path: '',
         component: LandingPageComponent,
       },
+      {
+        path: 'showmore',
+        component: ShowMorePageMainComponent,
+      },
     ]),
     MatIcon,
+    FormsModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
