@@ -8,7 +8,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '1',
   },
   {
     image: 'house1',
@@ -17,7 +18,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '2',
   },
   {
     image: 'house1',
@@ -26,7 +28,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '3',
   },
   {
     image: 'house1',
@@ -35,7 +38,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '4',
   },
   {
     image: 'house1',
@@ -44,7 +48,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '5',
   },
   {
     image: 'house1',
@@ -53,7 +58,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '6',
   },
   {
     image: 'house1',
@@ -62,7 +68,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '7',
   },
   {
     image: 'house1',
@@ -71,7 +78,8 @@ export const houses: housesModel[] = [
     address: 'رشت، گلسار، خیابان ۹۸',
     rahnPrice: '500',
     ejarePrice: '15',
-    id: '1',
+    cityId: '1',
+    houseId: '8',
   },
 
   {
@@ -81,7 +89,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '9',
   },
   {
     image: 'house1',
@@ -90,7 +99,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '10',
   },
   {
     image: 'house1',
@@ -99,7 +109,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '11',
   },
   {
     image: 'house1',
@@ -108,7 +119,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '12',
   },
   {
     image: 'house1',
@@ -117,7 +129,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '13',
   },
   {
     image: 'house1',
@@ -126,7 +139,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '14',
   },
   {
     image: 'house1',
@@ -135,7 +149,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '15',
   },
   {
     image: 'house1',
@@ -144,7 +159,8 @@ export const houses: housesModel[] = [
     address: 'تهران صادقیه خیابان ۲۳',
     rahnPrice: '600',
     ejarePrice: '35',
-    id: '2',
+    cityId: '2',
+    houseId: '16',
   },
   {
     image: 'house1',
@@ -153,7 +169,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '17',
   },
   {
     image: 'house1',
@@ -162,7 +179,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '18',
   },
   {
     image: 'house1',
@@ -171,7 +189,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '19',
   },
   {
     image: 'house1',
@@ -180,7 +199,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '20',
   },
   {
     image: 'house1',
@@ -189,7 +209,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '21',
   },
   {
     image: 'house1',
@@ -198,7 +219,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '22',
   },
   {
     image: 'house1',
@@ -207,7 +229,8 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '23',
   },
   {
     image: 'house1',
@@ -216,6 +239,7 @@ export const houses: housesModel[] = [
     address: 'شیراز، ملوانان، خیابان رسالت',
     rahnPrice: '300',
     ejarePrice: '100',
-    id: '3',
+    cityId: '3',
+    houseId: '24',
   },
 ]
