@@ -35,8 +35,9 @@ import { ShowMorePageMainComponent } from './components/show-more-page/show-more
 import { PageFilterComponent } from './components/show-more-page/page-filter/page-filter.component'
 import { ShowMoreSearchbarComponent } from './components/show-more-page/show-more-searchbar/show-more-searchbar.component'
 import { FormsModule } from '@angular/forms'
-import { MapComponent } from './components/show-more-page/map/map.component';
+import { MapComponent } from './components/show-more-page/map/map.component'
 import { ShowMoreHousesComponent } from './components/show-more-page/show-more-houses/show-more-houses.component'
+import { HouseCardPageMainComponent } from './components/house-card-page/house-card-page-main/house-card-page-main.component'
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ShowMoreHousesComponent } from './components/show-more-page/show-more-h
     ShowMoreSearchbarComponent,
     MapComponent,
     ShowMoreHousesComponent,
+    HouseCardPageMainComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +77,10 @@ import { ShowMoreHousesComponent } from './components/show-more-page/show-more-h
       {
         path: 'showmore',
         component: ShowMorePageMainComponent,
+      },
+      {
+        path: 'showmore/housedetail',
+        component: HouseCardPageMainComponent,
       },
     ]),
     MatIcon,

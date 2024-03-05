@@ -2,7 +2,7 @@
   <div class="absolute left-5 top-5 bg-neutral-gray9 rounded pt-3 pr-2 pl-2">
     <p class="text-body-xs text-white"> {{housesCardInputModel.hoursPosted}} ساعت پیش</p>
   </div>
-  <img class="w-full h-1/2 cursor-pointer" src="assets/photos/{{housesCardInputModel.image}}.png"/>
+  <img (click)="onHouseCardClick(housesCardInputModel.houseId)" class="w-full h-1/2 cursor-pointer" src="assets/photos/{{housesCardInputModel.image}}.png"/>
   <div class="p-5 flex flex-row justify-between justify-items-center ">
     <p class="text-neutral-gray8 text-body-xs">رهن و اجاره آپارتمان تهران</p>
     <mat-icon class="cursor-pointer">add_box</mat-icon>

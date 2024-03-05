@@ -12,7 +12,7 @@ export class GetHousesService {
   houses: housesModel[] = houses
 
   getHouses(id: string): Observable<housesModel[]> {
-    const newHouses: housesModel[] = houses.filter((house) => house.id === id)
+    const newHouses: housesModel[] = houses.filter((house) => house.cityId === id)
     return of(newHouses)
   }
   getCityNameById(id: string): string {

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { housesModel } from '../../../housesModel'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-houses-card',
@@ -8,4 +9,9 @@ import { housesModel } from '../../../housesModel'
 })
 export class HousesCardComponent {
   @Input() housesCardInputModel!: housesModel
+
+  constructor(private router: Router) {}
+  onHouseCardClick(houseId: string): void {
+    this.router.navigate(['showmore/housedetail'], { queryParams: { houseId: houseId } })
+  }
 }
