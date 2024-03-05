@@ -35,6 +35,8 @@ import { ShowMorePageMainComponent } from './components/show-more-page/show-more
 import { PageFilterComponent } from './components/show-more-page/page-filter/page-filter.component'
 import { ShowMoreSearchbarComponent } from './components/show-more-page/show-more-searchbar/show-more-searchbar.component'
 import { FormsModule } from '@angular/forms'
+import { MapComponent } from './components/show-more-page/map/map.component';
+import { ShowMoreHousesComponent } from './components/show-more-page/show-more-houses/show-more-houses.component'
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { FormsModule } from '@angular/forms'
     ShowMorePageMainComponent,
     PageFilterComponent,
     ShowMoreSearchbarComponent,
+    MapComponent,
+    ShowMoreHousesComponent,
   ],
   imports: [
     BrowserModule,
