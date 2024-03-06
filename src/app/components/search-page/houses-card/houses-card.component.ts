@@ -9,7 +9,7 @@ import { Router } from '@angular/router'
 })
 export class HousesCardComponent {
   @Input() housesCardInputModel!: housesModel
-
+  @Input() cityName!: string
   constructor(private router: Router) {}
   onHouseCardClick(houseId: string): void {
     this.router.navigate(['showmore/housedetail'], { queryParams: { houseId: houseId } })
