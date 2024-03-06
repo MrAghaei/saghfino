@@ -13,6 +13,7 @@ export class HouseCardPageMainComponent {
   private queryParamsSubscription: Subscription | undefined
   house!: housesModel
   houseId!: string
+  cityName!: string
   constructor(
     private route: ActivatedRoute,
     private getHouses: GetHousesService,
@@ -21,6 +22,7 @@ export class HouseCardPageMainComponent {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {
       this.houseId = params['houseId'] || ''
       this.fetchHouseById()
+      this.fetchCityName()
       console.log(this.house)
     })
   }
@@ -31,5 +33,8 @@ export class HouseCardPageMainComponent {
   }
   fetchHouseById(): void {
     this.house = this.getHouses.getHouseById(this.houseId)
+  }
+  fetchCityName(): void {
+    this.cityName = this.getHouses.getCityNameById(this.houseId)
   }
 }
