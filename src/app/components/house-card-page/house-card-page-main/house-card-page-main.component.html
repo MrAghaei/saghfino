@@ -1,3 +1,147 @@
-<div class="p-20 mt-52">
-  <p>ts</p>
+<div class="p-20 mt-52 w-screen flex flex-col gap-5" dir="rtl">
+  <div class="flex gap-2 mb-10">
+    <div>
+      <img src="assets/photos/card-details5.png" class="w-full h-auto" />
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <img src="assets/photos/card-details1.png" class="w-full h-auto" />
+      <img src="assets/photos/card-details2.png" class="w-full h-auto" />
+      <img src="assets/photos/card-details3.png" class="w-full h-auto" />
+      <img src="assets/photos/card-details4.png" class="w-full h-auto" />
+    </div>
+  </div>
+  <div class="flex gap-20">
+    <div class="w-1/2">
+      <div class="flex justify-between">
+        <p class="text-body-regular text-neutral-gray8">رهن و اجاره آپارتمان {{cityName}}</p>
+        <div>
+          <mat-icon class="cursor-pointer">share</mat-icon>
+          <mat-icon class="cursor-pointer">save_alt</mat-icon>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div>
+          <h3>{{house.address}}</h3>
+        </div>
+        <div class="flex gap-5">
+          <div class="flex flex-col gap-2 bg-neutral-gray2 rounded-2xl p-10 w-44">
+            <h4 class="self-center">متراژ</h4>
+            <div class="self-center"> {{house.area}}
+              متر</div>
+          </div>
+          <div class="flex flex-col gap-2 bg-neutral-gray2 rounded-2xl p-10 w-44">
+            <h4 class="self-center">اتاق</h4>
+            <div class="self-center"> {{house.area}}
+              متر</div>
+          </div>
+          <div class="flex flex-col gap-2 bg-neutral-gray2 rounded-2xl p-10 w-44">
+            <h4 class="self-center">طبقه</h4>
+            <div class="self-center"> {{house.area}}
+              متر</div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-between items-center border rounded-2xl pr-5 pl-5 pt-1 pb-1">
+            <h4>ودیعه</h4>
+            <h6>{{house.rahnPrice}} میلیون تومان</h6>
+          </div>
+          <div class="flex justify-between items-center border rounded-2xl pr-5 pl-5 pt-1 pb-1">
+            <h4>اجاره ماهیانه</h4>
+            <h6>{{house.ejarePrice}} میلیون تومان</h6>
+          </div>
+          <div class="flex justify-between items-center border rounded-2xl pr-5 pl-5 pt-1 pb-1">
+            <div>
+              <p class="text-body-xs">{{house.hoursPosted}} ساعت پیش</p>
+              <p class="text-body-xs">شناسه آگهی: {{house.houseId}}</p>
+            </div>
+            <div class="flex justify-center gap-1">
+              <mat-icon>error_outline</mat-icon>
+              <button class="text-body-xs">گزارش تخلف آگهی</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 mt-6">
+          <h4>امکانات</h4>
+          <div class="grid grid-cols-2">
+            <p class="text-body-xs text-neutral-gray11">پارکینگ: ۱</p>
+            <p class="text-body-xs text-neutral-gray11">سرويس بهداشتى: ٢</p>
+            <p class="text-body-xs text-neutral-gray11">انبارى: ۱</p>
+            <p class="text-body-xs text-neutral-gray11">نوع سرويس بهداشتى: فرنكى</p>
+            <p class="text-body-xs text-neutral-gray11">آسانسور: ٢</p>
+            <p class="text-body-xs text-neutral-gray11">سيستم سرمايش: چيلر</p>
+            <p class="text-body-xs text-neutral-gray11">جنس كف: سراميك</p>
+            <p class="text-body-xs text-neutral-gray11">سيستم كرمايش: نوساز</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 mt-6">
+          <h4>توضیحات</h4>
+          <div class="flex flex-col">
+            <p class="text-body-xs text-neutral-gray11">سن بنا: نوساز</p>
+            <p class="text-body-xs text-neutral-gray11">موقعيت جغرافيايى بنا: شمالى</p>
+            <p class="text-body-xs text-neutral-gray11">نوع سند: شخصى</p>
+            <p class="text-body-xs text-neutral-gray11">امكانات امنيتى: آيفون تصويرى، درب ضدسرقت</p>
+            <p class="text-body-xs text-neutral-gray11">ساير امكانات: كمد ديورى، ينجره ها UPVC</p>
+            <p class="text-body-xs text-neutral-gray11">زمان بازيد ٧ صبح تا ١١ شب</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 mt-6">
+          <h4>موقعیت</h4>
+          <div class="bg-neutral-gray5 p-20">نقشه بارگزاری نشد!</div>
+          <div class="flex justify-between mt-10">
+            <div>
+              <p class="text-body-xxs"> زمان ثبت آگهی:
+                {{house.hoursPosted}} ساعت پیش</p>
+            </div>
+            <div class="border-r pr-5">
+              <p class="text-body-xxs"> تعداد مشاهده این آگهی: ۲۳</p>
+            </div>
+            <div class="border-r pr-5">
+              <p class="text-body-xxs">تعداد ذخیره این آگهی: ۱۰</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between w-1/2">
+          <p class="text-body-xs">بازخورد شما درباره این آگهی چیست؟</p>
+          <div class="flex gap-5">
+            <mat-icon class="cursor-pointer">thumb_down</mat-icon>
+            <mat-icon class="cursor-pointer">thumb_up</mat-icon>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 mt-6">
+          <h4>آگهی های مشابه</h4>
+          <div class="flex gap-5">
+            <app-houses-card></app-houses-card>
+            <app-houses-card></app-houses-card>
+            <app-houses-card></app-houses-card>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="flex justify-center w-1/2 mt-24">
+      <div class="flex border gap-5 rounded-2xl p-5 w-fit h-fit">
+        <div>
+          <img class="size-16" src="assets/photos/m-aliz.png"/>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex gap-3">
+            <img class="size-8" src="assets/photos/re-freshte.png"/>
+            <h6 class="text-neutral-gray10">املاک لولمان</h6>
+          </div>
+          <div>
+            <h4 class="text-neutral-gray12">علی ذوقی</h4>
+          </div>
+          <div>
+            <p class="text-body-xxs">امتیاز: ۵ از ۵</p>
+            <p class="text-body-xxs">۶۰۰ آگهی فعال</p>
+          </div>
+          <button class="bg-primary-default rounded text-white text-button-md pr-10 pl-10 pt-2 pb-2 w-64">اطلاعات تماس</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

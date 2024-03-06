@@ -15,6 +15,10 @@ export class GetHousesService {
     const newHouses: housesModel[] = houses.filter((house) => house.cityId === id)
     return of(newHouses)
   }
+  getHouseById(id: string) {
+    const house: housesModel[] = houses.filter((house) => house.houseId === id)
+    return house[0]
+  }
   getCityNameById(id: string): string {
     switch (id) {
       case '1':
