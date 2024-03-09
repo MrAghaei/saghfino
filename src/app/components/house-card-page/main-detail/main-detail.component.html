@@ -1,0 +1,45 @@
+<div class="flex flex-col gap-5">
+  <div>
+    <h3>{{house.address}}</h3>
+  </div>
+  <div class="flex gap-5">
+    <div class="flex flex-col gap-2 bg-neutral-gray2 rounded-2xl p-10 w-44">
+      <h4 class="self-center">متراژ</h4>
+      <div class="self-center"> {{house.area}}
+        متر</div>
+    </div>
+    <div class="flex flex-col gap-2 bg-neutral-gray2 rounded-2xl p-10 w-44">
+      <h4 class="self-center">اتاق</h4>
+      <div class="self-center"> {{house.area}}
+        متر</div>
+    </div>
+    <div class="flex flex-col gap-2 bg-neutral-gray2 rounded-2xl p-10 w-44">
+      <h4 class="self-center">طبقه</h4>
+      <div class="self-center"> {{house.area}}
+        متر</div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-3">
+    <div class="flex justify-between items-center border rounded-2xl pr-5 pl-5 pt-1 pb-1">
+      <h4>ودیعه</h4>
+      <h6>{{house.rahnPrice}} میلیون تومان</h6>
+    </div>
+    <div class="flex justify-between items-center border rounded-2xl pr-5 pl-5 pt-1 pb-1">
+      <h4>اجاره ماهیانه</h4>
+      <h6>{{house.ejarePrice}} میلیون تومان</h6>
+    </div>
+    <div class="flex justify-between items-center border rounded-2xl pr-5 pl-5 pt-1 pb-1">
+      <div>
+        <p class="text-body-xs">{{house.hoursPosted}} ساعت پیش</p>
+        <p class="text-body-xs">شناسه آگهی: {{house.houseId}}</p>
+      </div>
+      <div class="flex justify-center gap-1">
+        <mat-icon>error_outline</mat-icon>
+        <button class="text-body-xs">گزارش تخلف آگهی</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
