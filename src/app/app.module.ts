@@ -37,7 +37,13 @@ import { ShowMoreSearchbarComponent } from './components/show-more-page/show-mor
 import { FormsModule } from '@angular/forms'
 import { MapComponent } from './components/show-more-page/map/map.component'
 import { ShowMoreHousesComponent } from './components/show-more-page/show-more-houses/show-more-houses.component'
-import { HouseCardPageMainComponent } from './components/house-card-page/house-card-page-main/house-card-page-main.component'
+import { HouseCardPageMainComponent } from './components/house-card-page/house-card-page-main/house-card-page-main.component';
+import { GalleryComponent } from './components/house-card-page/gallery/gallery.component';
+import { MainDetailComponent } from './components/house-card-page/main-detail/main-detail.component';
+import { EquipmentsComponent } from './components/house-card-page/equipments/equipments.component';
+import { DescriptionComponent } from './components/house-card-page/description/description.component';
+import { LocationComponent } from './components/house-card-page/location/location.component';
+import { RealEstateCardComponent } from './components/house-card-page/real-estate-card/real-estate-card.component'
 
 @NgModule({
   declarations: [
@@ -59,6 +65,12 @@ import { HouseCardPageMainComponent } from './components/house-card-page/house-c
     MapComponent,
     ShowMoreHousesComponent,
     HouseCardPageMainComponent,
+    GalleryComponent,
+    MainDetailComponent,
+    EquipmentsComponent,
+    DescriptionComponent,
+    LocationComponent,
+    RealEstateCardComponent,
   ],
   imports: [
     BrowserModule,
