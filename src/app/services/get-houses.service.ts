@@ -9,8 +9,6 @@ import { Observable, of } from 'rxjs'
 export class GetHousesService {
   constructor() {}
 
-  houses: housesModel[] = houses
-
   getHouses(id: string): Observable<housesModel[]> {
     const newHouses: housesModel[] = houses.filter((house) => house.cityId === id)
     return of(newHouses)

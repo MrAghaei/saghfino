@@ -1,8 +1,7 @@
-import { Component } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { map, Observable, startWith } from 'rxjs'
+import { map, Observable, startWith, Subject, takeUntil } from 'rxjs'
 import { FormControl } from '@angular/forms'
-// import { v4 as uuidv4 } from 'uuid'
 interface City {
   name: string
   id: string
@@ -12,18 +11,17 @@ interface City {
   templateUrl: './searchbar.component.html',
   styleUrl: './searchbar.component.scss',
 })
-export class SearchbarComponent {
-  cities: City[] = [
+export class SearchbarComponent implements OnInit, OnDestroy {
+  public cities: City[] = [
     { name: 'گیلان', id: '1' },
     { name: 'تهران', id: '2' },
     { name: 'شیراز', id: '3' },
   ]
+
+  private unsubscribe$ = new Subject<void>()
   filteredCities$!: Observable<City[]>
   cityControl = new FormControl()
 
-  // generateUniqueId() {
-  //   return uuidv4()
-  // }
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -33,7 +31,12 @@ export class SearchbarComponent {
     this.filteredCities$ = this.cityControl.valueChanges.pipe(
       startWith(''),
       map((value) => this._filterCities(value)),
+      takeUntil(this.unsubscribe$),
     )
+  }
+  ngOnDestroy() {
+    this.unsubscribe$.next()
+    this.unsubscribe$.complete()
   }
 
   private _filterCities(value: string): City[] {
