@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { GetHousesService } from '../../../services/get-houses.service'
+import { HousesService } from '../../../services/houses.service'
 import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
 import { Subscription } from 'rxjs'
@@ -16,7 +16,7 @@ export class ShowMorePageMainComponent implements OnInit, OnDestroy {
   private queryParamsSubscription: Subscription | undefined
   private cityName!: string
   constructor(
-    private getHousesService: GetHousesService,
+    private getHousesService: HousesService,
     private route: ActivatedRoute,
   ) {}
 

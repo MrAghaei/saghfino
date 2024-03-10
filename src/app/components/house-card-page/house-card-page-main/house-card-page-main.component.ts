@@ -2,7 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Subscription } from 'rxjs'
 import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
-import { GetHousesService } from '../../../services/get-houses.service'
+import { HousesService } from '../../../services/houses.service'
+import { housesDetailModel } from '../../../houses-detailModel'
 
 @Component({
   selector: 'app-house-card-page-main',
@@ -12,19 +13,20 @@ import { GetHousesService } from '../../../services/get-houses.service'
 export class HouseCardPageMainComponent implements OnInit, OnDestroy {
   public cityName!: string
   public house!: housesModel
+  public houseDetail!: housesDetailModel
 
   private queryParamsSubscription: Subscription | undefined
   private houseId!: string
   constructor(
     private route: ActivatedRoute,
-    private getHouses: GetHousesService,
+    private housesService: HousesService,
   ) {}
   ngOnInit() {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {
       this.houseId = params['houseId'] || ''
       this.fetchHouseById()
       this.fetchCityName()
-      console.log(this.house)
+      this.fetchHouseDetails()
     })
   }
   ngOnDestroy() {
@@ -33,9 +35,12 @@ export class HouseCardPageMainComponent implements OnInit, OnDestroy {
     }
   }
   fetchHouseById(): void {
-    this.house = this.getHouses.getHouseById(this.houseId)
+    this.house = this.housesService.getHouseById(this.houseId)
   }
   fetchCityName(): void {
-    this.cityName = this.getHouses.getCityNameById(this.houseId)
+    this.cityName = this.housesService.getCityNameById(this.houseId)
+  }
+  fetchHouseDetails(): void {
+    this.houseDetail = this.housesService.getHousesDetailById(this.houseId)
   }
 }

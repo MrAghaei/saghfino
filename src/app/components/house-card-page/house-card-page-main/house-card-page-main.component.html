@@ -11,9 +11,11 @@
       </div>
       <div class="flex flex-col gap-5">
         <app-main-detail [house]="house"></app-main-detail>
-        <app-equipments></app-equipments>
-        <app-description></app-description>
+        <app-equipments [houseDetail]="houseDetail"></app-equipments>
+        <app-description [houseDetail]="houseDetail"></app-description>
         <app-location [house]="house"></app-location>
+        <app-mini-detail [houseDetail]="houseDetail" [house]="house"></app-mini-detail>
+
         <div class="flex justify-between w-1/2">
           <p class="text-body-xs">بازخورد شما درباره این آگهی چیست؟</p>
           <div class="flex gap-5">
