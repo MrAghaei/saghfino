@@ -10,10 +10,11 @@ import { GetHousesService } from '../../../services/get-houses.service'
   styleUrl: './house-card-page-main.component.scss',
 })
 export class HouseCardPageMainComponent {
+  public cityName!: string
+  public house!: housesModel
+
   private queryParamsSubscription: Subscription | undefined
-  house!: housesModel
-  houseId!: string
-  cityName!: string
+  private houseId!: string
   constructor(
     private route: ActivatedRoute,
     private getHouses: GetHousesService,

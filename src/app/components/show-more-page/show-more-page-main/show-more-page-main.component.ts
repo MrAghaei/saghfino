@@ -10,15 +10,15 @@ import { Subscription } from 'rxjs'
   styleUrl: './show-more-page-main.component.scss',
 })
 export class ShowMorePageMainComponent {
+  public housesData: housesModel[] = []
+
+  private cityId!: string
+  private queryParamsSubscription: Subscription | undefined
+  private cityName!: string
   constructor(
     private getHousesService: GetHousesService,
     private route: ActivatedRoute,
   ) {}
-
-  cityId!: string
-  housesData: housesModel[] = []
-  private queryParamsSubscription: Subscription | undefined
-  cityName!: string
 
   ngOnInit() {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {
