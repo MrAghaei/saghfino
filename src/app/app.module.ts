@@ -43,7 +43,8 @@ import { MainDetailComponent } from './components/house-card-page/main-detail/ma
 import { EquipmentsComponent } from './components/house-card-page/equipments/equipments.component';
 import { DescriptionComponent } from './components/house-card-page/description/description.component';
 import { LocationComponent } from './components/house-card-page/location/location.component';
-import { RealEstateCardComponent } from './components/house-card-page/real-estate-card/real-estate-card.component'
+import { RealEstateCardComponent } from './components/house-card-page/real-estate-card/real-estate-card.component';
+import { MiniDetailComponent } from './components/house-card-page/mini-detail/mini-detail.component'
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { RealEstateCardComponent } from './components/house-card-page/real-estat
     DescriptionComponent,
     LocationComponent,
     RealEstateCardComponent,
+    MiniDetailComponent,
   ],
   imports: [
     BrowserModule,

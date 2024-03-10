@@ -1,6 +1,6 @@
 import { housesDetailModel } from './houses-detailModel'
 
-export const houses: housesDetailModel[] = [
+export const housesDetail: housesDetailModel[] = [
   {
     parking: '۱',
     bathroom: '۲',
