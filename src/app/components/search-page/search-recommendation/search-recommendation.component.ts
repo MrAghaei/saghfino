@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core'
   styleUrl: './search-recommendation.component.scss',
 })
 export class SearchRecommendationComponent {
-  searches: string[] = [
+  public searches: string[] = [
     'ظفر',
     'دولت',
     'قلھک',

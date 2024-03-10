@@ -39,15 +39,15 @@ import { Subscription } from 'rxjs'
   styleUrls: ['./search-page-main.component.scss'], // Corrected property name
 })
 export class SearchPageMainComponent implements OnInit, OnDestroy {
+  public cityName!: string
+  public housesData: housesModel[] = []
+
+  private cityId!: string
+  private queryParamsSubscription: Subscription | undefined
   constructor(
     private getHousesService: GetHousesService,
     private route: ActivatedRoute,
   ) {}
-
-  cityId!: string
-  housesData: housesModel[] = []
-  private queryParamsSubscription: Subscription | undefined
-  cityName!: string
 
   ngOnInit() {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {
