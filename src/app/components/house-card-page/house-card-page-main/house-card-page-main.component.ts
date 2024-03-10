@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Subscription } from 'rxjs'
 import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
@@ -9,7 +9,7 @@ import { GetHousesService } from '../../../services/get-houses.service'
   templateUrl: './house-card-page-main.component.html',
   styleUrl: './house-card-page-main.component.scss',
 })
-export class HouseCardPageMainComponent {
+export class HouseCardPageMainComponent implements OnInit, OnDestroy {
   public cityName!: string
   public house!: housesModel
 

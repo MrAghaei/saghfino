@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { GetHousesService } from '../../../services/get-houses.service'
 import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs'
   templateUrl: './show-more-page-main.component.html',
   styleUrl: './show-more-page-main.component.scss',
 })
-export class ShowMorePageMainComponent {
+export class ShowMorePageMainComponent implements OnInit, OnDestroy {
   public housesData: housesModel[] = []
 
   private cityId!: string

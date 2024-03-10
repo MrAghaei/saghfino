@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core'
-import { map } from 'rxjs'
-import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-top-consultant',
