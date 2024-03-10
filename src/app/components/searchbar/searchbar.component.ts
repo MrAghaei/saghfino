@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { map, Observable, startWith, Subject, takeUntil } from 'rxjs'
+import { filter, map, Observable, startWith, Subject, takeUntil } from 'rxjs'
 import { FormControl } from '@angular/forms'
 interface City {
   name: string
@@ -18,40 +18,42 @@ export class SearchbarComponent implements OnInit, OnDestroy {
     { name: 'فارس', id: '3' },
   ]
 
+  public filteredCities$!: Observable<City[]>
+  public cityControl = new FormControl()
+
   private unsubscribe$ = new Subject<void>()
-  filteredCities$!: Observable<City[]>
-  cityControl = new FormControl()
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.filteredCities$ = this.cityControl.valueChanges.pipe(
       startWith(''),
       map((value) => this._filterCities(value)),
       takeUntil(this.unsubscribe$),
     )
   }
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.unsubscribe$.next()
     this.unsubscribe$.complete()
   }
 
   private _filterCities(value: string): City[] {
-    const filterValue = value.toLowerCase()
+    let filterValue = ''
+    if (typeof value === 'string') filterValue = value.toLowerCase()
     return this.cities.filter((city) => city.name.toLowerCase().includes(filterValue))
   }
 
-  onCitySelectionChange(): void {
+  public onCitySelectionChange(): void {
     this.router.navigate(['/search'], {
-      queryParams: { city: this.cityControl.value },
+      queryParams: { city: this.cityControl.value.id },
       relativeTo: this.route,
       queryParamsHandling: 'merge',
     })
   }
-  onInputChange(): void {
+  public onInputChange(): void {
     if (!this.cityControl.value) {
       this.router.navigate([''])
     }
