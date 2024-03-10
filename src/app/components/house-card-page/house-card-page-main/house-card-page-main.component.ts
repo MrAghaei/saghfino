@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Subscription } from 'rxjs'
 import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
-import { GetHousesService } from '../../../services/get-houses.service'
+import { HousesService } from '../../../services/houses.service'
 
 @Component({
   selector: 'app-house-card-page-main',
@@ -17,7 +17,7 @@ export class HouseCardPageMainComponent implements OnInit, OnDestroy {
   private houseId!: string
   constructor(
     private route: ActivatedRoute,
-    private getHouses: GetHousesService,
+    private getHouses: HousesService,
   ) {}
   ngOnInit() {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {

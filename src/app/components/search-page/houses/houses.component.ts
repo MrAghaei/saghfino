@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { houses } from '../../../Houses'
+import { houses } from '../../../houses'
 import { housesModel } from '../../../housesModel'
 import { map } from 'rxjs'
 import { ActivatedRoute, Router } from '@angular/router'

@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing'
 
-import { GetHousesService } from './get-houses.service';
+import { HousesService } from './houses.service'
 
 describe('GetHousesService', () => {
-  let service: GetHousesService;
+  let service: HousesService
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(GetHousesService);
-  });
+    TestBed.configureTestingModule({})
+    service = TestBed.inject(HousesService)
+  })
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    expect(service).toBeTruthy()
+  })
+})
