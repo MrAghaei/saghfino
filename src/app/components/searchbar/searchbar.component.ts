@@ -15,7 +15,7 @@ export class SearchbarComponent implements OnInit, OnDestroy {
   public cities: City[] = [
     { name: 'گیلان', id: '1' },
     { name: 'تهران', id: '2' },
-    { name: 'شیراز', id: '3' },
+    { name: 'فارس', id: '3' },
   ]
 
   private unsubscribe$ = new Subject<void>()

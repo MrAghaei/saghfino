@@ -15,5 +15,7 @@ export interface housesDetailModel {
   visitingHours: string[]
   views: string
   saves: string
+  room: string
+  floor: string
   houseId: string
 }
