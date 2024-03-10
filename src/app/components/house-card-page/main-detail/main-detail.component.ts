@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { housesModel } from '../../../housesModel'
+import { housesDetailModel } from '../../../houses-detailModel'
 
 @Component({
   selector: 'app-main-detail',
@@ -8,4 +9,5 @@ import { housesModel } from '../../../housesModel'
 })
 export class MainDetailComponent {
   @Input() house!: housesModel
+  @Input() houseDetail!: housesDetailModel
 }
