@@ -34,12 +34,12 @@ export class ShowMorePageMainComponent implements OnInit, OnDestroy {
     }
   }
 
-  fetchHouses(): void {
+  private fetchHouses(): void {
     this.getHousesService.getHouses(this.cityId).subscribe((data) => {
       this.housesData = data
     })
   }
-  fetchCityNames(): void {
+  private fetchCityNames(): void {
     this.cityName = this.getHousesService.getCityNameById(this.cityId)
   }
 }

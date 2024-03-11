@@ -6,6 +6,4 @@ import { housesModel } from '../../../housesModel'
   templateUrl: './location.component.html',
   styleUrl: './location.component.scss',
 })
-export class LocationComponent {
-  @Input() house!: housesModel
-}
+export class LocationComponent {}

@@ -15,7 +15,7 @@ export class TopRealEstateCardComponent {
 
   @Output() onRealEstateCardClick: EventEmitter<any> = new EventEmitter<any>()
 
-  onClick(value: string): void {
+  public onClick(value: string): void {
     this.onRealEstateCardClick.emit(value)
   }
 }
