@@ -23,19 +23,4 @@ export class HousesService {
     const houseDetail: housesDetailModel[] = housesDetail.filter((detail) => detail.houseId === id)
     return houseDetail[0]
   }
-  public getCityNameById(id: string): string {
-    switch (id) {
-      case '1':
-        return 'گیلان'
-        break
-      case '2':
-        return 'تهران'
-        break
-      case '3':
-        return 'شیراز'
-        break
-      default:
-        return ''
-    }
-  }
 }

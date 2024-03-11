@@ -3,6 +3,7 @@ import { HousesService } from '../../../services/houses.service'
 import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
 import { Subscription } from 'rxjs'
+import { CityService } from '../../../services/city.service'
 
 @Component({
   selector: 'app-show-more-page-main',
@@ -16,7 +17,8 @@ export class ShowMorePageMainComponent implements OnInit, OnDestroy {
   private queryParamsSubscription: Subscription | undefined
   private cityName!: string
   constructor(
-    private getHousesService: HousesService,
+    private houseService: HousesService,
+    private cityService: CityService,
     private route: ActivatedRoute,
   ) {}
 
@@ -35,11 +37,11 @@ export class ShowMorePageMainComponent implements OnInit, OnDestroy {
   }
 
   private fetchHouses(): void {
-    this.getHousesService.getHouses(this.cityId).subscribe((data) => {
+    this.houseService.getHouses(this.cityId).subscribe((data) => {
       this.housesData = data
     })
   }
   private fetchCityNames(): void {
-    this.cityName = this.getHousesService.getCityNameById(this.cityId)
+    this.cityName = this.cityService.getCityNameById(this.cityId)
   }
 }

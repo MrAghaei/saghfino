@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router'
 import { housesModel } from '../../../housesModel'
 import { HousesService } from '../../../services/houses.service'
 import { housesDetailModel } from '../../../houses-detailModel'
+import { CityService } from '../../../services/city.service'
 
 @Component({
   selector: 'app-house-card-page-main',
@@ -18,8 +19,9 @@ export class HouseCardPageMainComponent implements OnInit, OnDestroy {
   private queryParamsSubscription: Subscription | undefined
   private houseId!: string
   constructor(
-    private route: ActivatedRoute,
     private housesService: HousesService,
+    private cityService: CityService,
+    private route: ActivatedRoute,
   ) {}
   ngOnInit() {
     this.queryParamsSubscription = this.route.queryParams.subscribe((params) => {
@@ -38,7 +40,7 @@ export class HouseCardPageMainComponent implements OnInit, OnDestroy {
     this.house = this.housesService.getHouseById(this.houseId)
   }
   private fetchCityName(): void {
-    this.cityName = this.housesService.getCityNameById(this.houseId)
+    this.cityName = this.cityService.getCityNameById(this.houseId)
   }
   private fetchHouseDetails(): void {
     this.houseDetail = this.housesService.getHousesDetailById(this.houseId)
