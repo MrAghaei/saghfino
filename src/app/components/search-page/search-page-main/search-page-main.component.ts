@@ -3,6 +3,7 @@ import { HousesService } from '../../../services/houses.service'
 import { housesModel } from '../../../housesModel'
 import { ActivatedRoute } from '@angular/router'
 import { Subscription } from 'rxjs'
+import { CityService } from '../../../services/city.service'
 
 @Component({
   selector: 'app-search-page-main',
@@ -16,7 +17,8 @@ export class SearchPageMainComponent implements OnInit, OnDestroy {
   private cityId!: string
   private queryParamsSubscription: Subscription | undefined
   constructor(
-    private getHousesService: HousesService,
+    private houseService: HousesService,
+    private cityService: CityService,
     private route: ActivatedRoute,
   ) {}
 
@@ -35,11 +37,11 @@ export class SearchPageMainComponent implements OnInit, OnDestroy {
   }
 
   private fetchHouses(): void {
-    this.getHousesService.getHouses(this.cityId).subscribe((data) => {
+    this.houseService.getHouses(this.cityId).subscribe((data) => {
       this.housesData = data
     })
   }
   private fetchCityNames(): void {
-    this.cityName = this.getHousesService.getCityNameById(this.cityId)
+    this.cityName = this.cityService.getCityNameById(this.cityId)
   }
 }

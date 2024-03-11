@@ -2,21 +2,15 @@ import { Component, OnDestroy, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { filter, map, Observable, startWith, Subject, takeUntil } from 'rxjs'
 import { FormControl } from '@angular/forms'
-interface City {
-  name: string
-  id: string
-}
+import { City, CityService } from '../../services/city.service'
+
 @Component({
   selector: 'app-searchbar',
   templateUrl: './searchbar.component.html',
   styleUrl: './searchbar.component.scss',
 })
 export class SearchbarComponent implements OnInit, OnDestroy {
-  public cities: City[] = [
-    { name: 'گیلان', id: '1' },
-    { name: 'تهران', id: '2' },
-    { name: 'فارس', id: '3' },
-  ]
+  public cities!: City[]
 
   public filteredCities$!: Observable<City[]>
   public cityControl = new FormControl()
@@ -24,6 +18,7 @@ export class SearchbarComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>()
 
   constructor(
+    private cityService: CityService,
     private router: Router,
     private route: ActivatedRoute,
   ) {}
@@ -34,6 +29,7 @@ export class SearchbarComponent implements OnInit, OnDestroy {
       map((value) => this._filterCities(value)),
       takeUntil(this.unsubscribe$),
     )
+    this.fetchCities()
   }
   ngOnDestroy(): void {
     this.unsubscribe$.next()
@@ -57,5 +53,8 @@ export class SearchbarComponent implements OnInit, OnDestroy {
     if (!this.cityControl.value) {
       this.router.navigate([''])
     }
+  }
+  fetchCities(): void {
+    this.cities = this.cityService.getCities()
   }
 }
