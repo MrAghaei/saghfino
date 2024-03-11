@@ -14,7 +14,7 @@ export class HousesComponent {
   @Input() cityName!: string
 
   constructor(private router: Router) {}
-  onSeeMoreClick(): void {
+  public onSeeMoreClick(): void {
     this.router.navigate(['showmore'], { queryParamsHandling: 'merge' })
   }
 }

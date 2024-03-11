@@ -13,7 +13,7 @@ export class TopConsultantCardComponent {
 
   @Output() onTopConsultantCardClick: EventEmitter<any> = new EventEmitter<any>()
 
-  onClick(value: string): void {
+  public onClick(value: string): void {
     this.onTopConsultantCardClick.emit(value)
   }
 }

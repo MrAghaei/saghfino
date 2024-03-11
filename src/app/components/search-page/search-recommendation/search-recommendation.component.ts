@@ -22,7 +22,7 @@ export class SearchRecommendationComponent {
   ]
   @Output() onClickSearches: EventEmitter<any> = new EventEmitter<any>()
 
-  onClick(value: string): void {
+  public onClick(value: string): void {
     this.onClickSearches.emit(value)
   }
 }

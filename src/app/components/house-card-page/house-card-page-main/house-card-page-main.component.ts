@@ -34,13 +34,13 @@ export class HouseCardPageMainComponent implements OnInit, OnDestroy {
       this.queryParamsSubscription.unsubscribe()
     }
   }
-  fetchHouseById(): void {
+  private fetchHouseById(): void {
     this.house = this.housesService.getHouseById(this.houseId)
   }
-  fetchCityName(): void {
+  private fetchCityName(): void {
     this.cityName = this.housesService.getCityNameById(this.houseId)
   }
-  fetchHouseDetails(): void {
+  private fetchHouseDetails(): void {
     this.houseDetail = this.housesService.getHousesDetailById(this.houseId)
   }
 }

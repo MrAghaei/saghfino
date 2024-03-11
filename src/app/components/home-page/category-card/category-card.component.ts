@@ -11,7 +11,7 @@ export class CategoryCardComponent {
   @Input() title!: string
   @Output() onCardClick: EventEmitter<any> = new EventEmitter<any>()
 
-  onClick(value: string): void {
+  public onClick(value: string): void {
     this.onCardClick.emit(value)
   }
 }
